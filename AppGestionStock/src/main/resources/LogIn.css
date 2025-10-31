@@ -1,0 +1,85 @@
+.left-form{
+    -fx-background-color: linear-gradient(to bottom right, #5a4534, #96412e);
+    -fx-border-color: #0000;
+    -fx-border-width: .4px 0px .4px .4px;
+
+}
+
+.right-form{
+
+   -fx-background-color: #fff;
+   -fx-border-color: #000;
+    -fx-border-width: .4px 0px .4px .4px;
+}
+
+.text-field, .password-field {
+     -fx-background-color: #2E2E2E;
+     -fx-border-color: #FFD700;
+     -fx-border-width: 1.5;
+     -fx-border-radius: 8;
+     -fx-background-radius: 8;
+     -fx-text-fill: white;
+ }
+
+/* ----- BOUTON LOGIN (fond sombre) ----- */
+.button-login {
+    -fx-background-color: linear-gradient(to bottom, #FFD700, #B8860B);
+    -fx-text-fill: #1C1C1C;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #DAA520;
+    -fx-border-width: 1.5;
+    -fx-cursor: hand;
+    -fx-padding: 8 20 8 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 215, 0, 0.5), 10, 0, 0, 3);
+}
+
+/* Hover effect */
+.button-login:hover {
+    -fx-background-color: linear-gradient(to bottom, #FFDF00, #FFD700);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Pressed effect */
+.button-login:pressed {
+    -fx-background-color: #B8860B;
+    -fx-text-fill: #FFD700;
+    -fx-translate-y: 2;
+}
+
+/* Effet au survol */
+.button-login:hover {
+    -fx-background-color: linear-gradient(to bottom, #FFEB3B, #FFD700);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+/* Effet au clic */
+.button-login:pressed {
+    -fx-background-color: #FBC02D;
+    -fx-translate-y: 2;
+}
+
+.hyperlink-login {
+    -fx-text-fill: #E0E0E0;
+    -fx-underline: false;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+}
+
+.hyperlink-login:hover {
+    -fx-text-fill: #FFD700; /* doré au survol */
+    -fx-underline: true;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-transition: all 0.3s ease;
+}
+
+.hyperlink-login:visited {
+    -fx-text-fill: #BDBDBD;
+}
