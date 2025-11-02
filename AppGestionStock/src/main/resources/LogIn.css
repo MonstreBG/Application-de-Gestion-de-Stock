@@ -83,3 +83,21 @@
 .hyperlink-login:visited {
     -fx-text-fill: #BDBDBD;
 }
+
+/* Style du bouton croix */
+.close-button {
+    -fx-background-color: transparent;   /* Bouton transparent */
+    -fx-cursor: hand;                     /* Curseur main au survol */
+    -fx-padding: 5;                       /* Petite marge interne */
+    -fx-background-radius: 30;            /* Rond */
+}
+
+/* Effet au survol */
+.close-button:hover {
+    -fx-background-color: #ff4d4d;        /* Fond rouge clair */
+}
+
+/* Effet au clic */
+.close-button:pressed {
+    -fx-background-color: #cc0000;        /* Rouge plus foncé */
+}

@@ -6,36 +6,26 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="690.0" stylesheets="@../../../LogIn.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.appgestionstock.HelloController">
    <children>
       <AnchorPane fx:id="main_form" prefHeight="532.0" prefWidth="330.0">
          <children>
-            <AnchorPane layoutX="28.0" prefHeight="532.0" prefWidth="336.0" style="-fx-background-color: #ddc123;" styleClass="left-form" stylesheets="@../../../LogIn.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane layoutX="28.0" prefHeight="532.0" prefWidth="336.0" style="-fx-background-color: #ddc123;" styleClass="left-form" stylesheets="@../../../LogIn.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <ImageView fitHeight="108.0" fitWidth="110.0" layoutX="105.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../images/icons8-cash-register-50.png" />
-                     </image>
-                  </ImageView>
                   <Label layoutX="64.0" layoutY="274.0" prefHeight="22.0" prefWidth="220.0" text="Gestion de Stock">
                      <font>
                         <Font name="Tahoma" size="24.0" />
                      </font>
                   </Label>
+                  <FontIcon iconLiteral="mdi-baby" iconSize="100" layoutX="100.0" layoutY="192.0" wrappingWidth="123.0" />
                </children></AnchorPane>
-            <AnchorPane fx:id="admin_form" layoutX="357.0" prefHeight="532.0" prefWidth="355.0" styleClass="right-form" stylesheets="@../../../LogIn.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="admin_form" layoutX="357.0" prefHeight="532.0" prefWidth="355.0" styleClass="right-form" stylesheets="@../../../LogIn.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <ImageView fitHeight="132.0" fitWidth="156.0" layoutX="108.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../images/user.png" />
-                     </image>
-                  </ImageView>
                   <Label layoutX="104.0" layoutY="184.0" stylesheets="@../../../LogIn.css" text="Admin Sign In" textFill="#ddc123">
                      <font>
                         <Font name="Berlin Sans FB" size="25.0" />
@@ -58,20 +48,14 @@
                         <Font size="14.0" />
                      </font>
                   </Hyperlink>
-                  <Button layoutX="295.0" layoutY="7.0" minWidth="28.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="28.0" style="-fx-background-color: grey;" AnchorPane.rightAnchor="18.0" />
-                  <ImageView fitHeight="26.0" fitWidth="23.0" layoutX="299.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../images/icons8-x-50.png" />
-                     </image>
-                  </ImageView>
+                  <Button layoutX="280.4" layoutY="7.0" minWidth="30.0" mnemonicParsing="false" onAction="#close" prefHeight="37.0" prefWidth="73.0" style="-fx-background-color: transparent;: grey;" styleClass="button-login" stylesheets="@../../../LogIn.css" AnchorPane.bottomAnchor="488.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <FontIcon iconLiteral="mdi-close-circle-outline" iconSize="30" styleClass="button-login" />
+                     </graphic></Button>
+                  <FontIcon iconLiteral="mdi-account-star-variant" iconSize="100" layoutX="128.0" layoutY="148.0" />
                </children></AnchorPane>
-            <AnchorPane fx:id="employee_form" layoutX="345.0" layoutY="10.0" prefHeight="532.0" prefWidth="355.0" styleClass="right-form" stylesheets="@../../../LogIn.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="employee_form" layoutX="345.0" layoutY="10.0" prefHeight="532.0" prefWidth="355.0" styleClass="right-form" stylesheets="@../../../LogIn.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <ImageView fitHeight="132.0" fitWidth="156.0" layoutX="108.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../images/user.png" />
-                     </image>
-                  </ImageView>
                   <Label layoutX="87.0" layoutY="183.0" stylesheets="@../../../LogIn.css" text="Employee Sign In">
                      <font>
                         <Font name="Berlin Sans FB" size="25.0" />
@@ -89,17 +73,16 @@
                         <Font name="Bell MT" size="12.0" />
                      </font>
                   </Button>
-                  <Hyperlink fx:id="employee_hyperLink" layoutX="89.0" layoutY="474.0" onAction="#switchForm" prefHeight="26.0" prefWidth="195.0" styleClass="hyperlink-login" stylesheets="@../../../LogIn.css" text="LogIn Admin Account ?">
+                  <Hyperlink fx:id="employee_hyperLink" layoutX="99.0" layoutY="470.0" onAction="#switchForm" prefHeight="26.0" prefWidth="155.0" styleClass="hyperlink-login" stylesheets="@../../../LogIn.css" text="LogIn Admin Account ?">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Hyperlink>
-                  <Button layoutX="295.0" layoutY="7.0" minWidth="28.0" mnemonicParsing="false" onDragDetected="#close" prefHeight="26.0" prefWidth="28.0" style="-fx-background-color: white;" textFill="#b50000" AnchorPane.rightAnchor="18.0" />
-                  <ImageView fitHeight="26.0" fitWidth="23.0" layoutX="299.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../images/icons8-x-50.png" />
-                     </image>
-                  </ImageView>
+                  <Button fx:id="closeBtn" layoutX="287.0" layoutY="1.0" minWidth="28.0" mnemonicParsing="false" onAction="#close" onDragDetected="#close" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: transparent;: grey;" styleClass="button-login" stylesheets="@../../../LogIn.css" textFill="#b50000" AnchorPane.rightAnchor="2.0">
+                     <graphic>
+                        <FontIcon iconLiteral="mdi-close-circle-outline" iconSize="30" />
+                     </graphic></Button>
+                  <FontIcon iconLiteral="mdi-account-multiple" iconSize="100" layoutX="126.0" layoutY="146.0" />
                </children>
             </AnchorPane>
          </children>

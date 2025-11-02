@@ -24,7 +24,7 @@ public class HelloApplication extends Application {
         Parent root = fxmlLoader.load();
 
         // Création de la scène
-        Scene scene = new Scene(root, 690, 700);
+        Scene scene = new Scene(root);
 
         // Permet de déplacer la fenêtre en cliquant et glissant
         root.setOnMousePressed((MouseEvent event) -> {
